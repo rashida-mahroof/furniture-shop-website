@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Festive', cursive;
+    font-family: 'Raleway', sans-serif;
+}
+:root{
+    --body-color:#fff;
+    --nav-color:rgb(236, 236, 236);
+    --text-color:#000;
+    --primary-color:#e24115;
+    --secondary-color:rgb(214, 212, 212);
+}
+
+.top{
+    position: relative;
+    background: rgb(70, 68, 68);
+    width: 100%;
+    height: 30px;   
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+.top .top-cnt{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 2px 50px;
+}
+.top .top-cnt p{
+    color:var(--body-color);
+    font-size: 12px;
+}
+.top .top-cnt .rgt-cnt{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+.top .top-cnt .lft-cnt{
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+}
+.rgt-cnt i{
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--body-color);
+    margin-right: 6px
+}
+.fxd-menu{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: var(--nav-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.fxd-mn-mbl{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: var(--nav-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.menu-cnt{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+.menu-cnt .logo{
+    display: flex;
+    align-items: center;
+}
+.menu-cnt .logo img{
+    width: 90%;
+}
+.menu-cnt .nav-links ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.menu-cnt .nav-links ul li{
+    padding-right: 30px;
+}
+.menu-cnt .nav-links ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight:500 ;
+    font-size: 16px;
+}
+.menu-cnt .nav-icons{
+    display: flex;
+    flex-direction: row;
+}
+.menu-cnt .nav-icons i{
+    font-size: 22px;
+    padding: 20px;
+}
+
+.mbl-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.mbl-menu .mbl-lft{
+    display: flex;
+    align-items: center;
+}
+.mbl-menu .mbl-lft i{
+    font-size: 25px;
+    padding-right: 5px;
+}
+.mbl-menu .mbl-rgt i{
+    font-size: 20px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1000px){
+    
+    .top{
+        display: none;
+    }
+    .fxd-mn-mbl{
+        display: block !important;
+    }
+    .fxd-menu{
+        display: none !important;
+    }
+    .mob-footer{
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background: var(--body-color);
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 -6px 14px -8px #bdbdbd;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mob-footer i{
+        position: absolute;
+        font-size: 18px;
+        padding: 0 30px;
+        color: var(--body-color);
+
+    }
+    .mob-footer .icn-bx{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        margin: 10px 20px;
+    }
+}
